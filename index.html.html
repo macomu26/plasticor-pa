@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plasticor PA – Distribución de Bolsas Plásticas</title>
+<meta name="description" content="Distribución estratégica de bolsas plásticas en Costa Rica. Soluciones industriales, comerciales y alimentarias con entrega eficiente." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #FFFFFF;
+    --off-white: #FAFAF8;
+    --cream: #F5F2EC;
+    --black: #0C0C0A;
+    --black-soft: #1A1A16;
+    --gray: #6B6B60;
+    --gray-light: #C8C7BE;
+    --border: #E4E2DA;
+    --gold: #B8942A;
+    --gold-light: #D4AC45;
+    --gold-pale: #F7F0DD;
+    --gold-dim: rgba(184,148,42,0.12);
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 3rem; height: 70px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--black); text-decoration: none;
+  }
+  .logo em { font-style: normal; color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+  .nav-links a {
+    font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gray); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    color: var(--gold) !important; border: 1px solid var(--gold) !important;
+    padding: 0.45rem 1.2rem !important; border-radius: 2px !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-dim) !important; }
+
+
+  .hero { min-height: 90vh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+  .hero-left {
+    background: var(--black);
+    padding: 7rem 4rem 5rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-left::before {
+    content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent); opacity: 0.4;
+  }
+  .hero-left::after {
+    content: ''; position: absolute; bottom: -60px; right: -60px;
+    width: 300px; height: 300px; border-radius: 50%;
+    border: 1px solid rgba(184,148,42,0.12);
+  }
+  .hero-eyebrow { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2.5rem; }
+  .eyebrow-line { width: 28px; height: 1px; background: var(--gold); }
+  .eyebrow-text { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+  .hero-left h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+    font-weight: 600; line-height: 1.1; color: var(--white); margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+  }
+  .hero-left h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-left p {
+    color: rgba(255,255,255,0.5); font-size: 0.92rem; font-weight: 300;
+    max-width: 380px; line-height: 1.8; margin-bottom: 3rem;
+  }
+  .btn-gold {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--gold); color: var(--white);
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none;
+    align-self: flex-start; transition: background 0.25s, transform 0.2s;
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-gold svg { width: 18px; height: 18px; fill: white; }
+  .hero-right {
+    background: var(--cream);
+    padding: 7rem 3rem 5rem 4rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-right-title {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gray); margin-bottom: 2rem; font-weight: 500;
+  }
+  .hero-stat { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+  .hero-stat:first-of-type { border-top: 1px solid var(--border); }
+  .hero-stat-num { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 600; color: var(--gold); line-height: 1; }
+  .hero-stat-label { font-size: 0.8rem; color: var(--gray); font-weight: 400; margin-top: 0.2rem; letter-spacing: 0.04em; }
+
+
+  .proof-strip {
+    background: var(--off-white); border-bottom: 1px solid var(--border);
+    padding: 1.25rem 3rem;
+    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+  }
+  .proof-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray-light); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+  .proof-divider { width: 1px; height: 16px; background: var(--border); flex-shrink: 0; }
+  .proof-items { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+  .proof-item {
+    font-family: var(--font-serif); font-size: 0.95rem; font-weight: 600;
+    color: var(--gray-light); letter-spacing: 0.06em; opacity: 0.6;
+    white-space: nowrap; transition: opacity 0.2s;
+  }
+  .proof-item:hover { opacity: 1; color: var(--gray); }
+
+
+  section { padding: 6rem 3rem; }
+  .s-inner { max-width: 1100px; margin: 0 auto; }
+  .s-eyebrow { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .s-eyebrow-line { width: 24px; height: 1px; background: var(--gold); }
+  .s-eyebrow-text { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+  .s-title { font-family: var(--font-serif); font-size: clamp(2.2rem, 3.5vw, 3rem); font-weight: 600; line-height: 1.15; color: var(--black); margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+  .s-sub { color: var(--gray); font-size: 0.92rem; font-weight: 300; max-width: 560px; line-height: 1.8; }
+
+
+  #productos { background: var(--off-white); }
+  .prod-header { margin-bottom: 3.5rem; }
+  .prod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border: 1px solid var(--border); border-radius: 2px; overflow: hidden;
+  }
+  .prod-item {
+    padding: 2.25rem 1.75rem;
+    border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    background: var(--white); position: relative; transition: all 0.4s ease;
+  }
+  .prod-item:last-child { border-right: none; }
+  .prod-item::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0); transition: transform 0.3s; transform-origin: left;
+  }
+  .prod-item:hover { background: var(--cream); box-shadow: 0 20px 40px rgba(0,0,0,0.03); transform: translateY(-5px); }
+  .prod-item:hover::before { transform: scaleX(1); }
+  .prod-icon { width: 40px; height: 40px; margin-bottom: 1.25rem; }
+  .prod-icon svg { width: 40px; height: 40px; }
+  .prod-item h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--black); margin-bottom: 0.6rem; line-height: 1.3; }
+  .prod-item p { font-size: 0.8rem; color: var(--gray); font-weight: 300; line-height: 1.65; }
+  .prod-badge {
+    display: inline-block; margin-top: 1.25rem;
+    font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; border-bottom: 1px solid var(--gold); padding-bottom: 1px;
+  }
+
+
+  #por-que { background: var(--white); }
+  .why-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 6rem; margin-top: 4rem; align-items: start; }
+  .why-intro h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; line-height: 1.4; margin-bottom: 1.25rem; color: var(--black); }
+  .why-intro p { font-size: 0.88rem; color: var(--gray); font-weight: 300; line-height: 1.8; margin-bottom: 2rem; }
+  .contact-block { background: var(--gold-pale); border: 1px solid rgba(184,148,42,0.2); border-radius: 2px; padding: 1.5rem; }
+  .contact-block .c-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.5rem; }
+  .contact-block .c-number { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--black); white-space: nowrap; }
+  .contact-block .c-note { font-size: 0.78rem; color: var(--gray); margin-top: 0.25rem; }
+  .why-items { display: flex; flex-direction: column; }
+  .why-item { display: grid; grid-template-columns: 56px 1fr; border-bottom: 1px solid var(--border); transition: all 0.4s ease; }
+  .why-item:first-child { border-top: 1px solid var(--border); }
+  .why-item-num {
+    padding: 1.75rem 0; font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400;
+    color: var(--gold-light); opacity: 0.4; border-right: 1px solid var(--border);
+    display: flex; align-items: flex-start; justify-content: center; padding-top: 1.75rem;
+  }
+  .why-item-body { padding: 1.75rem 0 1.75rem 1.75rem; }
+  .why-item-body h4 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--black); margin-bottom: 0.35rem; }
+  .why-item-body p { font-size: 0.83rem; color: var(--gray); font-weight: 300; line-height: 1.7; }
+
+
+  #sectores { background: var(--black); }
+  #sectores .s-title { color: var(--white); }
+  #sectores .s-sub { color: rgba(255,255,255,0.45); }
+  .sectors-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.5rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden;
+  }
+  .sector-item { padding: 2rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); transition: background 0.25s; }
+  .sector-item:nth-child(3n) { border-right: none; }
+  .sector-item:nth-child(n+4) { border-bottom: none; }
+  .sector-item:hover { background: rgba(184,148,42,0.05); }
+  .sector-name { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+  .sector-desc { font-size: 0.78rem; color: rgba(255,255,255,0.35); font-weight: 300; }
+  .sector-gold-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; margin-bottom: 1rem; opacity: 0.7; }
+
+
+  .form-section { background: var(--cream); border-top: 1px solid var(--border); padding: 6rem 3rem; }
+  .form-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .form-copy h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 600; line-height: 1.2; margin-bottom: 1rem; }
+  .form-copy h2 em { font-style: italic; color: var(--gold); }
+  .form-copy p { color: var(--gray); font-size: 0.9rem; font-weight: 300; line-height: 1.8; margin-bottom: 1.5rem; }
+  .form-wa-alt { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--gray); }
+  .form-wa-alt a { color: var(--gold); text-decoration: none; font-weight: 500; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-field { display: flex; flex-direction: column; gap: 0.35rem; }
+  .form-field label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); font-weight: 600; }
+  .form-field input, .form-field select {
+    background: var(--white); border: 1px solid var(--border); border-radius: 2px;
+    padding: 0.8rem 1rem; font-family: var(--font-sans); font-size: 0.9rem;
+    color: var(--black); font-weight: 400; outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+  }
+  .form-field input:focus, .form-field select:focus { border-color: var(--gold); }
+  .form-field input::placeholder { color: var(--gray-light); font-weight: 300; }
+  .form-submit {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--black); color: var(--white); border: none;
+    padding: 1rem 1.5rem; font-family: var(--font-sans); font-size: 0.82rem;
+    font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    border-radius: 2px; cursor: pointer; margin-top: 0.5rem;
+    text-decoration: none; transition: background 0.25s;
+  }
+  .form-submit:hover { background: var(--black-soft); }
+  .form-submit svg { width: 18px; height: 18px; fill: #25D366; }
+  .form-privacy { font-size: 0.72rem; color: var(--gray-light); margin-top: 0.25rem; line-height: 1.6; }
+
+
+  footer {
+    background: var(--black); padding: 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-logo { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); }
+  .footer-logo em { font-style: normal; color: var(--gold); }
+  footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+  footer a { color: var(--gold); text-decoration: none; }
+
+
+  .floating-wa {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+    display: flex; align-items: center; gap: 0.6rem;
+    background: var(--black); border: 1px solid rgba(37,211,102,0.35);
+    border-radius: 100px; padding: 0.6rem 1rem 0.6rem 0.75rem;
+    text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: border-color 0.25s, transform 0.2s;
+  }
+  .floating-wa:hover { border-color: #25D366; transform: translateY(-2px); }
+  .floating-wa svg { width: 22px; height: 22px; fill: #25D366; flex-shrink: 0; }
+  .floating-wa-label { font-size: 0.75rem; font-weight: 600; color: var(--white); letter-spacing: 0.06em; white-space: nowrap; }
+
+
+  .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--black); border-top: 1px solid rgba(184,148,42,0.3); padding: 0.85rem 1.5rem; }
+  .mobile-sticky-cta a { display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: var(--gold); color: var(--white); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.85rem; border-radius: 2px; text-decoration: none; }
+  .mobile-sticky-cta a svg { width: 18px; height: 18px; fill: white; }
+
+
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 5rem 1.5rem 3rem; }
+    .hero-right { padding: 3rem 1.5rem 4rem; display: grid; grid-template-columns: repeat(3,1fr); }
+    .hero-stat { padding: 1rem; border-bottom: none; border-right: 1px solid var(--border); }
+    .hero-stat:last-child { border-right: none; }
+    .proof-strip { padding: 1rem 1.5rem; gap: 1rem; }
+    section { padding: 4rem 1.5rem; }
+    .why-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .sectors-grid { grid-template-columns: 1fr 1fr; }
+    .form-section { padding: 4rem 1.5rem; }
+    .form-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; }
+    .floating-wa .floating-wa-label { display: none; }
+    .floating-wa { padding: 0.6rem; border-radius: 50%; }
+    .mobile-sticky-cta { display: block; }
+    body { padding-bottom: 70px; }
+  }
+  @media (max-width: 560px) {
+    .prod-grid { grid-template-columns: 1fr; }
+    .sectors-grid { grid-template-columns: 1fr; }
+    .hero-right { grid-template-columns: 1fr; }
+    .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
+    .proof-items { gap: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">PLASTICOR <em>PA</em></a>
+  <div class="nav-links">
+    <a href="#productos">Productos</a>
+    <a href="#por-que">Ventajas</a>
+    <a href="#sectores">Sectores</a>
+    <a href="#contacto" class="nav-cta">Cotizar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Distribución · Costa Rica</span></div>
+    <h1>La escala que su <em>operación</em> exige.</h1>
+    <p>Proveemos bolsas plásticas industriales, alimentarias y comerciales a empresas costarricenses. Calidad, volumen y respuesta sin excusas.</p>
+    <a class="btn-gold" href="https://wa.me/50688311880?text=Hola%2C%20me%20interesa%20cotizar%20bolsas%20pl%C3%A1sticas" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.548 4.107 1.508 5.84L0 24l6.335-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.365l-.36-.213-3.72.976.996-3.635-.236-.374A9.768 9.768 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+      Cotizar por WhatsApp
+    </a>
+  </div>
+  <div class="hero-right">
+    <p class="hero-right-title">Por qué elegirnos</p>
+    <div class="hero-stat"><div class="hero-stat-num">+</div><div class="hero-stat-label">Amplia variedad de bolsas plásticas</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">24h</div><div class="hero-stat-label">Tiempo de respuesta a cotizaciones</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">CR</div><div class="hero-stat-label">Distribución a nivel nacional</div></div>
+  </div>
+</div>
+
+<!-- SOCIAL PROOF STRIP -->
+<div class="proof-strip">
+  <span class="proof-label">Sectores que confían en nosotros</span>
+  <div class="proof-divider"></div>
+  <div class="proof-items">
+    <span class="proof-item">Hotelería</span>
+    <span class="proof-item">Procesadoras de Carne</span>
+    <span class="proof-item">Restaurantes</span>
+    <span class="proof-item">Supermercados</span>
+    <span class="proof-item">Manufactura</span>
+    <span class="proof-item">Construcción</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="productos">
+  <div class="s-inner">
+    <div class="prod-header">
+      <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Catálogo</span></div>
+      <h2 class="s-title">Nuestras bolsas</h2>
+      <p class="s-sub">Todo en bolsas plásticas para cualquier negocio. Cubrimos todas las necesidades comerciales e industriales con la mayor resistencia del mercado. ¿Busca algo específico? Nosotros lo hacemos realidad.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-item">
+        <div class="prod-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M12 8h16l2 4H10l2-4z" stroke="#B8942A" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 12l2 20h16l2-20H10z" stroke="#B8942A" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 12v16M20 12v16M24 12v16" stroke="#B8942A" stroke-width="1" stroke-opacity="0.4"/></svg></div>
+        <h3>Bolsas de basura</h3>
+        <p>Para uso doméstico, comercial e institucional. Distintas capacidades y calibres.</p>
+        <span class="prod-badge">Más solicitado</span>
+      </div>
+      <div class="prod-item">
+        <div class="prod-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="10" width="24" height="22" rx="1" stroke="#B8942A" stroke-width="1.5"/><path d="M8 16h24" stroke="#B8942A" stroke-width="1" stroke-opacity="0.5"/><path d="M14 10V7M26 10V7" stroke="#B8942A" stroke-width="1.5" stroke-linecap="round"/><path d="M13 22l4 4 10-8" stroke="#B8942A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Industriales de alta resistencia</h3>
+        <p>Para carga pesada, manufactura y procesos industriales exigentes.</p>
+        <span class="prod-badge">Alta resistencia</span>
+      </div>
+      <div class="prod-item">
+        <div class="prod-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M14 8h12v6l2 18H12L14 14V8z" stroke="#B8942A" stroke-width="1.5" stroke-linejoin="round"/><path d="M17 14c0 1.657 1.343 3 3 3s3-1.343 3-3" stroke="#B8942A" stroke-width="1" stroke-opacity="0.6"/><circle cx="20" cy="22" r="2" fill="#B8942A" fill-opacity="0.25" stroke="#B8942A" stroke-width="1"/></svg></div>
+        <h3>Empaque alimentario</h3>
+        <p>Aptas para contacto con alimentos. Carnicerías, restaurantes, procesadoras.</p>
+        <span class="prod-badge">Food-grade</span>
+      </div>
+      <div class="prod-item">
+        <div class="prod-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M13 13h14l-2 18H15L13 13z" stroke="#B8942A" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 13V10a4 4 0 018 0v3" stroke="#B8942A" stroke-width="1.5" stroke-linecap="round"/><path d="M17 21h6M17 26h4" stroke="#B8942A" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/></svg></div>
+        <h3>Bolsas comerciales</h3>
+        <p>Para tiendas y comercios al detalle. Varios tamaños y tipos de asas.</p>
+        <span class="prod-badge">Retail</span>
+      </div>
+      <div class="prod-item">
+        <div class="prod-icon"><svg viewBox="0 0 40 40" fill="none"><rect x="9" y="12" width="22" height="18" rx="1" stroke="#B8942A" stroke-width="1.5"/><path d="M9 18h22" stroke="#B8942A" stroke-width="1" stroke-opacity="0.5"/><circle cx="20" cy="15" r="1.5" fill="#B8942A"/><path d="M14 24h5M14 27h8" stroke="#B8942A" stroke-width="1" stroke-linecap="round" stroke-opacity="0.6"/></svg></div>
+        <h3>Bolsas impresas</h3>
+        <p>Personalizadas con su logo. Imagen profesional en cada entrega.</p>
+        <span class="prod-badge">A pedido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="por-que">
+  <div class="s-inner">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Ventajas</span></div>
+    <h2 class="s-title">¿Por qué Plasticor PA?</h2>
+    <div class="why-layout">
+      <div class="why-intro">
+        <h3>Un proveedor confiable es parte de su operación</h3>
+        <p>Trabajamos con empresas que necesitan abastecimiento constante, no solo un precio. Respuesta rápida, trato directo y variedad de producto en un solo lugar.</p>
+        <div class="contact-block">
+          <div class="c-label">Contáctenos directamente</div>
+          <div class="c-number">+506 8831-1880</div>
+          <div class="c-note">WhatsApp · Respuesta en menos de 24h</div>
+          <div class="c-note" style="margin-top:0.5rem;">📞 +506 2483-1311 &nbsp;·&nbsp; Teléfono fijo</div>
+          <div class="c-note" style="margin-top:0.25rem;"><a href="mailto:rogercorderopa@gmail.com" style="color:var(--gold);text-decoration:none;">rogercorderopa@gmail.com</a></div>
+          <div class="c-note" style="margin-top:0.25rem;"><a href="https://instagram.com/plasticorpa" target="_blank" style="color:var(--gold);text-decoration:none;">@plasticorpa</a></div>
+        </div>
+      </div>
+      <div class="why-items">
+        <div class="why-item"><div class="why-item-num">1</div><div class="why-item-body"><h4>Respuesta en 24 horas</h4><p>Su operación no puede esperar. Cotizaciones rápidas para que pueda decidir sin demoras.</p></div></div>
+        <div class="why-item"><div class="why-item-num">2</div><div class="why-item-body"><h4>Variedad completa</h4><p>Desde basura doméstica hasta empaque alimentario certificado. Un solo proveedor para múltiples necesidades.</p></div></div>
+        <div class="why-item"><div class="why-item-num">3</div><div class="why-item-body"><h4>Asesoría Especializada</h4><p>No solo vendemos bolsas; analizamos su operación para recomendarle el material y calibre exacto que su negocio realmente necesita.</p></div></div>
+        <div class="why-item"><div class="why-item-num">4</div><div class="why-item-body"><h4>Suministro Programado</h4><p>Ideal para negocios con compras recurrentes. Garantizamos disponibilidad de stock y precios preferenciales mediante planificación de pedidos por volumen.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectores">
+  <div class="s-inner">
+    <div class="s-eyebrow"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Sectores</span></div>
+    <h2 class="s-title">¿A quién atendemos?</h2>
+    <p class="s-sub">Empresas que necesitan abastecimiento constante y confiable de material plástico.</p>
+    <div class="sectors-grid">
+      <div class="sector-item"><div class="sector-gold-dot"></div><div class="sector-name">Hoteles y hospedajes</div><div class="sector-desc">Bolsas de limpieza, lavandería y cocina</div></div>
+      <div class="sector-item"><div class="sector-gold-dot"></div><div class="sector-name">Procesadoras de carne</div><div class="sector-desc">Empaque food-grade y bolsas industriales</div></div>
+      <div class="sector-item"><div class="sector-gold-dot"></div><div class="sector-name">Restaurantes</div><div class="sector-desc">Bolsas para cocina y servicio al cliente</div></div>
+      <div class="sector-item"><div class="sector-gold-dot"></div><div class="sector-name">Supermercados y retail</div><div class="sector-desc">Bolsas comerciales e impresas</div></div>
+      <div class="sector-item"><div class="sector-gold-dot"></div><div class="sector-name">Manufactura</div><div class="sector-desc">Bolsas industriales de alta resistencia</div></div>
+      <div class="sector-item"><div class="sector-gold-dot"></div><div class="sector-name">Construcción</div><div class="sector-desc">Bolsas para escombros y residuos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<div class="form-section" id="contacto">
+  <div class="form-inner">
+    <div class="form-copy">
+      <div class="s-eyebrow" style="margin-bottom:1.25rem;"><div class="s-eyebrow-line"></div><span class="s-eyebrow-text">Contacto</span></div>
+      <h2>¿Prefiere que le <em>llamemos?</em></h2>
+      <p>Déjenos sus datos y un asesor se comunicará con usted en menos de 24 horas para entender sus necesidades y prepararle una cotización.</p>
+      <span class="form-wa-alt">O escríbanos directo: <a href="https://wa.me/50688311880" target="_blank">&nbsp;WhatsApp +506 8831-1880 →</a></span>
+    </div>
+    <div>
+      <div class="contact-form">
+        <div class="form-field"><label>Nombre completo</label><input type="text" placeholder="Ej: Juan Pérez" /></div>
+        <div class="form-field"><label>Empresa</label><input type="text" placeholder="Nombre de su negocio" /></div>
+        <div class="form-field"><label>Teléfono</label><input type="tel" placeholder="Ej: 8888-8888" /></div>
+        <div class="form-field">
+          <label>Tipo de producto de interés</label>
+          <select>
+            <option value="" disabled selected>Seleccione una categoría</option>
+            <option>Bolsas de basura</option>
+            <option>Industriales de alta resistencia</option>
+            <option>Empaque alimentario</option>
+            <option>Bolsas comerciales</option>
+            <option>Bolsas impresas</option>
+            <option>Otro / No sé aún</option>
+          </select>
+        </div>
+        <a class="form-submit" href="https://wa.me/50688311880?text=Hola%2C%20me%20interesa%20recibir%20una%20cotizaci%C3%B3n%20de%20Plasticor%20PA" target="_blank">
+          Enviar por WhatsApp
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.548 4.107 1.508 5.84L0 24l6.335-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.365l-.36-.213-3.72.976.996-3.635-.236-.374A9.768 9.768 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+        </a>
+        <p class="form-privacy">Sus datos son confidenciales y solo se usarán para contactarle con su cotización.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">PLASTICOR <em>PA</em></div>
+  <p>Distribución de bolsas plásticas · Costa Rica</p>
+  <p>
+    <a href="https://wa.me/50688311880">+506 8831-1880</a> &nbsp;·&nbsp;
+    <a href="tel:+50624831311">+506 2483-1311</a> &nbsp;·&nbsp;
+    <a href="mailto:rogercorderopa@gmail.com">rogercorderopa@gmail.com</a> &nbsp;·&nbsp;
+    <a href="https://instagram.com/plasticorpa" target="_blank">@plasticorpa</a> &nbsp;·&nbsp;
+    © 2025 Plasticor PA
+  </p>
+</footer>
+
+<!-- FLOATING WA — pill con label (desktop) / solo ícono (móvil) -->
+<a class="floating-wa" href="https://wa.me/50688311880?text=Hola%2C%20me%20interesa%20cotizar%20bolsas%20pl%C3%A1sticas" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.548 4.107 1.508 5.84L0 24l6.335-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.365l-.36-.213-3.72.976.996-3.635-.236-.374A9.768 9.768 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+  <span class="floating-wa-label">Cotizar ahora</span>
+</a>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta">
+  <a href="https://wa.me/50688311880?text=Hola%2C%20me%20interesa%20cotizar%20bolsas%20pl%C3%A1sticas" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.548 4.107 1.508 5.84L0 24l6.335-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.365l-.36-.213-3.72.976.996-3.635-.236-.374A9.768 9.768 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+    Cotizar por WhatsApp
+  </a>
+</div>
+
+</body>
+</html>
