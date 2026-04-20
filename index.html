@@ -3,95 +3,578 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Distribuidora Plasticor PA – Distribución de Bolsas Plásticas</title>
-<meta name="description" content="Distribución estratégica de bolsas plásticas en Costa Rica desde 2010. Soluciones industriales y alimentarias." />
+<title>Bolsas Plásticas al Por Mayor en Costa Rica | Plasticor PA</title>
+<meta name="description" content="Distribuidor mayorista de bolsas plásticas en Costa Rica. Venta de bolsas plásticas para industria cárnica, hoteles, restaurantes y comercio. Desde 2010. Carrizal, Alajuela." />
+<meta name="keywords" content="bolsas plásticas Costa Rica, venta de bolsas plásticas, bolsas plásticas al por mayor, empaques industriales Costa Rica, bolsas para empacadoras de carne, Plasticor PA" />
+<meta property="og:title" content="Plasticor PA — Bolsas Plásticas Costa Rica" />
+<meta property="og:description" content="Distribución mayorista de bolsas plásticas en Costa Rica desde 2010. Pedidos a partir de 15 kg." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://plasticorpa.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plasticor PA",
+  "description": "Distribuidor mayorista de bolsas plásticas y empaques en Costa Rica",
+  "url": "https://plasticorpa.com",
+  "email": "rogercorderopa@gmail.com",
+  "telephone": "+50688311880",
+  "foundingDate": "2010",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Carrizal",
+    "addressRegion": "Alajuela",
+    "addressCountry": "CR"
+  },
+  "areaServed": "Costa Rica"
+}
+</script>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --white: #FFFFFF; --off-white: #FAFAF8; --cream: #F5F2EC; --black: #0C0C0A;
-    --black-soft: #1A1A16; --gray: #6B6B60; --gray-light: #C8C7BE; --border: #E4E2DA;
-    --gold: #B8942A; --gold-light: #D4AC45; --gold-pale: #F7F0DD;
-    --font-serif: 'Cormorant Garamond', Georgia, serif; --font-sans: 'Jost', sans-serif;
-  }
-  html { scroll-behavior: smooth; }
-  body { background: var(--white); color: var(--black); font-family: var(--font-sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
-  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 0 3rem; height: 70px; display: flex; align-items: center; justify-content: space-between; }
-  .logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); text-decoration: none; }
-  .logo em { font-style: normal; color: var(--gold); }
-  .nav-links { display: flex; align-items: center; gap: 2rem; }
-  .nav-links a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
-  .hero { min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; background: var(--black); color: white; }
-  .hero-left { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid rgba(255,255,255,0.1); }
-  .hero-left h1 { font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
-  .hero-left h1 em { color: var(--gold); font-style: italic; }
-  .btn-gold { display: inline-flex; background: var(--gold); color: white; padding: 1rem 2rem; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; width: fit-content; }
-  .hero-right { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: var(--cream); color: var(--black); }
-  .hero-stat { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
-  .hero-stat-num { font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold); font-weight: 600; }
-  section { padding: 5rem 3rem; }
-  .s-title { font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
-  .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-  .prod-item { padding: 2rem; border: 1px solid var(--border); background: var(--off-white); }
-  .footer-logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--white); }
-  footer { background: var(--black); color: white; padding: 3rem; text-align: center; }
-  .floating-wa { position: fixed; bottom: 2rem; right: 2rem; background: #25D366; color: white; padding: 1rem; border-radius: 50px; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 600; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-  .floating-wa svg { width: 24px; height: 24px; fill: white; }
-  @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } .nav-links { display: none; } }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fafaf8;color:#0f0f0e;font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* ── VARIABLES ── */
+:root{
+  --bg:#fafaf8;--white:#fff;--ink:#0f0f0e;--ink2:#3a3a38;--muted:#9a9a94;
+  --rule:#e8e8e2;--gold:#b8972a;--gold-dark:#9e7a1f;--gold-dim:#e8d48a;
+  --serif:'Cormorant Garamond',serif;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+
+/* ── NAV ── */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,250,248,0.94);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 56px;height:72px;transition:background .3s;
+}
+.nav.scrolled{background:rgba(250,250,248,0.99)}
+.logo{display:flex;align-items:baseline;gap:6px;cursor:pointer}
+.logo-pa{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--gold);letter-spacing:-1px;line-height:1}
+.logo-name{font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--ink2)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s;font-weight:400}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-wa{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--gold);border-bottom:1px solid var(--gold-dim);padding-bottom:2px;white-space:nowrap;transition:border-color .2s}
+.nav-wa:hover{border-bottom-color:var(--gold)}
+.nav-cta{background:transparent;color:var(--gold);font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;border:1.5px solid var(--gold);cursor:pointer;font-family:var(--sans);transition:all .2s}
+.nav-cta:hover{background:var(--gold);color:#fff}
+
+/* ── HERO ── */
+.hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 56px 64px;border-bottom:1px solid var(--rule);gap:64px;overflow:hidden}
+.hero-eyebrow{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);display:block}
+.hero h1{font-family:var(--serif);font-size:clamp(52px,5.5vw,88px);font-weight:300;line-height:.92;letter-spacing:-2.5px;color:var(--ink);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-seo{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:28px}
+.hero-sub{font-size:15px;color:var(--muted);line-height:1.85;max-width:400px;margin-bottom:48px;font-weight:300}
+.hero-actions{display:flex;gap:14px;align-items:stretch;margin-bottom:20px}
+.btn-primary{background:var(--gold);color:#fff;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:16px 36px;border:2px solid var(--gold);cursor:pointer;font-family:var(--sans);transition:all .2s}
+.btn-primary:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+.btn-secondary{background:var(--white);color:var(--ink);font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;border:2px solid var(--ink);cursor:pointer;font-family:var(--sans);transition:all .2s}
+.btn-secondary:hover{background:var(--ink);color:var(--white)}
+.hero-wa{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--muted);transition:color .2s}
+.hero-wa:hover{color:var(--gold)}
+.hero-wa svg{flex-shrink:0}
+.hero-visual{display:flex;align-items:center;justify-content:center}
+.hero-visual svg{width:100%;max-width:500px}
+
+/* ── STATS ── */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border-bottom:1px solid var(--rule)}
+.stat{background:var(--white);padding:32px 56px}
+.stat-n{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--gold);line-height:1}
+.stat-l{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:8px}
+
+/* ── TICKER ── */
+.ticker{border-bottom:1px solid var(--rule);overflow:hidden;padding:14px 0;background:var(--white)}
+.ticker-inner{display:flex;gap:48px;animation:ticker 30s linear infinite;white-space:nowrap}
+.ticker-item{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* ── SECTIONS ── */
+.section{padding:96px 56px;border-bottom:1px solid var(--rule)}
+.sec-eye{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.sec-title{font-family:var(--serif);font-size:clamp(32px,3.5vw,52px);font-weight:300;line-height:1.02;letter-spacing:-1px;color:var(--ink)}
+.sec-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:64px;gap:48px}
+.sec-aside{max-width:300px;font-size:14px;color:var(--muted);line-height:1.85;font-weight:300;text-align:right;flex-shrink:0;padding-top:6px}
+
+/* ── PRODUCTS ── */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule)}
+.p-card{background:var(--white);padding:36px 32px;position:relative;overflow:hidden;transition:background .25s}
+.p-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.p-card:hover::after{transform:scaleX(1)}
+.p-card:hover{background:var(--bg)}
+.p-num{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:1px;margin-bottom:12px;opacity:.7}
+.p-badge{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold);margin-bottom:14px}
+.p-name{font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:-.5px;margin-bottom:10px;line-height:1.2}
+.p-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:18px;font-weight:300}
+.p-spec{font-family:var(--mono);font-size:10px;color:var(--muted);display:flex;gap:8px;margin-bottom:5px}
+.p-spec-dot{color:var(--gold);flex-shrink:0}
+.p-price{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:14px;font-style:italic}
+
+/* ── SECTORES ── */
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule)}
+.sec-item{background:var(--white);padding:40px 32px;transition:background .2s}
+.sec-item:hover{background:var(--bg)}
+.sec-n{font-family:var(--serif);font-size:14px;color:var(--gold);font-style:italic;margin-bottom:20px}
+.sec-name{font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:-.5px;margin-bottom:12px}
+.sec-body{font-size:13px;color:var(--muted);line-height:1.85;font-weight:300}
+
+/* ── FORM ── */
+.empaque-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.form-group{margin-bottom:24px}
+.form-label{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:10px}
+.form-input,.form-select,.form-textarea{background:transparent;border:none;border-bottom:1px solid var(--rule);color:var(--ink);font-size:15px;padding:10px 0;outline:none;width:100%;font-weight:300;transition:border-color .2s;font-family:var(--sans);appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-bottom-color:var(--gold)}
+.form-textarea{resize:none;min-height:96px}
+
+/* ── ARTICLES ── */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)}
+.b-card{background:var(--white);padding:48px 40px;transition:background .2s;cursor:pointer}
+.b-card:hover{background:var(--bg)}
+.b-tag{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.b-tag::before{content:'';width:24px;height:1px;background:var(--gold);display:block}
+.b-title{font-family:var(--serif);font-size:28px;font-weight:300;letter-spacing:-.5px;line-height:1.15;margin-bottom:16px}
+.b-excerpt{font-size:14px;color:var(--muted);line-height:1.85;font-weight:300;margin-bottom:28px}
+.b-read{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase}
+
+/* ── ARTICLE OVERLAY ── */
+.article-overlay{display:none;position:fixed;inset:0;background:var(--white);z-index:300;overflow-y:auto;padding:72px 56px;animation:slideUp .4s cubic-bezier(.4,0,.2,1)}
+.article-overlay.open{display:block}
+.art-close{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);cursor:pointer;margin-bottom:48px;display:inline-flex;align-items:center;gap:8px;background:none;border:none;transition:color .2s}
+.art-close::before{content:'←'}
+.art-close:hover{color:var(--ink)}
+.art-tag{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.art-title{font-family:var(--serif);font-size:clamp(36px,4vw,56px);font-weight:300;letter-spacing:-1.5px;line-height:1.02;margin-bottom:40px;max-width:720px}
+.art-body{max-width:680px;font-size:16px;color:var(--ink2);line-height:1.9;font-weight:300}
+.art-body p{margin-bottom:22px}
+.art-body h3{font-family:var(--serif);font-size:24px;font-weight:300;letter-spacing:-.5px;margin:36px 0 14px;color:var(--ink)}
+.art-body strong{font-weight:500;color:var(--ink)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.c-block{margin-bottom:36px}
+.c-label{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.c-val{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--ink2);line-height:1.5}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-family:var(--sans);border-bottom:1px solid var(--gold-dim);padding-bottom:4px;transition:border-color .2s;font-weight:400}
+.wa-btn:hover{border-bottom-color:var(--gold)}
+.seo-block{font-family:var(--mono);font-size:9.5px;color:var(--muted);line-height:1.9;padding-top:32px;border-top:1px solid var(--rule);margin-top:20px}
+
+/* ── FOOTER ── */
+.footer{padding:44px 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-links{display:flex;gap:28px}
+.footer-links a{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.footer-copy{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px}
+.footer-credit{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px}
+.footer-credit a{color:var(--gold);border-bottom:1px solid var(--gold-dim);padding-bottom:1px;transition:border-color .2s}
+.footer-credit a:hover{border-bottom-color:var(--gold)}
+
+/* ── ANIMATIONS ── */
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes floatBag{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes floatL{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes floatR{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes gridPulse{0%,100%{opacity:.12}50%{opacity:.22}}
+
+.hero-eyebrow{animation:fadeUp .6s .1s both}
+.hero h1{animation:fadeUp .7s .2s both}
+.hero-seo{animation:fadeUp .6s .35s both}
+.hero-sub{animation:fadeUp .7s .45s both}
+.hero-actions{animation:fadeUp .7s .55s both}
+.hero-wa{animation:fadeUp .7s .65s both}
+
+.ld1{stroke-dasharray:2000;stroke-dashoffset:2000;animation:draw 2.4s ease forwards}
+.ld2{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.8s .4s ease forwards}
+.ld3{stroke-dasharray:800;stroke-dashoffset:800;animation:draw 1.4s .8s ease forwards}
+.ld4{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.2s 1.1s ease forwards}
+.ld5{stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1s 1.4s ease forwards}
+.fi1{opacity:0;animation:fadeIn .6s 1.8s forwards}
+.fi2{opacity:0;animation:fadeIn .6s 2.1s forwards}
+.fi3{opacity:0;animation:fadeIn .6s 2.4s forwards}
+.bag-main{animation:floatBag 4s ease-in-out infinite 2.6s}
+.bag-left{animation:floatL 5s ease-in-out infinite 2.8s}
+.bag-right{animation:floatR 3.5s ease-in-out infinite 3s}
+.grid-line{animation:gridPulse 3s ease-in-out infinite}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav{padding:0 24px}.nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:48px 24px;min-height:auto}
+  .hero-visual{display:none}
+  .stats-row{grid-template-columns:1fr}.stat{padding:24px}
+  .section{padding:64px 24px}
+  .sec-header{flex-direction:column}.sec-aside{text-align:left;max-width:100%}
+  .prod-grid{grid-template-columns:1fr}
+  .sec-grid{grid-template-columns:1fr 1fr}
+  .empaque-grid{grid-template-columns:1fr;gap:0}
+  .blog-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .footer{flex-direction:column;align-items:flex-start;padding:32px 24px}
+  .footer-right{align-items:flex-start}
+  .article-overlay{padding:48px 24px}
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="#">DISTRIBUIDORA PLASTICOR <em>PA</em></a>
-  <div class="nav-links">
-    <a href="#productos">Productos</a>
-    <a href="#contacto">Contacto</a>
+<!-- ARTICLE OVERLAYS -->
+<div id="art-ley" class="article-overlay">
+  <button class="art-close" onclick="closeArticle('ley')">Volver</button>
+  <div class="art-tag">Regulación · Costa Rica</div>
+  <h2 class="art-title">Ley 9786: Lo que su negocio debe saber sobre el plástico en Costa Rica</h2>
+  <div class="art-body">
+    <p>La Ley 9786, conocida como la Ley para la Gestión Integral de Residuos, generó incertidumbre en el sector comercial e industrial desde su entrada en vigencia. Sin embargo, su aplicación práctica es más específica de lo que muchos creen, y la mayoría de los negocios pueden continuar operando con normalidad si comprenden bien su alcance.</p>
+    <h3>¿Qué prohíbe exactamente la ley?</h3>
+    <p>La ley regula principalmente los <strong>plásticos de un solo uso no esenciales</strong>: pajillas, agitadores, cubiertos desechables de plástico convencional y bolsas de tipo camiseta de plástico delgado entregadas en puntos de venta al consumidor final sin costo. No prohíbe el uso de bolsas plásticas en procesos productivos, empaque industrial, manejo de residuos ni distribución a granel.</p>
+    <h3>¿Qué dice el Ministerio de Salud?</h3>
+    <p>El Ministerio de Salud aclaró oficialmente que los establecimientos comerciales pueden continuar usando bolsas plásticas mientras no se publiquen las especificaciones técnicas definitivas en el reglamento correspondiente. Esto otorga un margen importante de operación a comercios, industrias y distribuidores mientras el marco regulatorio se consolida.</p>
+    <h3>¿Qué significa esto para su empresa?</h3>
+    <p>Si su negocio usa bolsas para <strong>empaque de carne, manejo de residuos industriales, almacenamiento agrícola o distribución de productos</strong>, no está en el alcance de la prohibición. La ley apunta al consumidor final en el punto de venta minorista, no a la cadena productiva ni a los procesos industriales.</p>
+    <h3>Recomendación práctica</h3>
+    <p>Manténgase informado sobre las actualizaciones del reglamento de la Ley 9786. Si tiene dudas sobre si su operación específica está afectada, consulte directamente con el Ministerio de Salud o un asesor legal especializado en normativa ambiental costarricense. En Plasticor estamos al tanto de los cambios regulatorios y podemos orientarle sobre las opciones de empaque disponibles para su industria.</p>
+  </div>
+</div>
+
+<div id="art-oxo" class="article-overlay">
+  <button class="art-close" onclick="closeArticle('oxo')">Volver</button>
+  <div class="art-tag">Sostenibilidad · Ciencia</div>
+  <h2 class="art-title">Por qué el plástico oxobiodegradable puede ser peor para el medio ambiente</h2>
+  <div class="art-body">
+    <p>El plástico oxobiodegradable se comercializa como una solución ecológica al problema del plástico convencional. La idea parece atractiva: un plástico que se degrada solo en el ambiente. Sin embargo, la evidencia científica acumulada en los últimos años apunta en una dirección diferente.</p>
+    <h3>¿Qué es realmente el plástico oxobiodegradable?</h3>
+    <p>El plástico oxobiodegradable, como el fabricado con aditivo D2W, no se biodegrada en el sentido estricto del término. Lo que hace es <strong>fragmentarse</strong> en partículas cada vez más pequeñas bajo la acción del calor, la luz y el oxígeno. Ese proceso de fragmentación no equivale a biodegradación: el material sigue siendo plástico, solo que en piezas microscópicas.</p>
+    <h3>El problema con el reciclaje</h3>
+    <p>Esta es la parte más crítica. Cuando el plástico oxobiodegradable se mezcla con plástico convencional en los flujos de reciclaje, <strong>contamina el lote completo</strong>. Las plantas recicladoras no pueden separarlo fácilmente del polietileno o polipropileno estándar. El resultado es que el material reciclado resultante tiene menor calidad y muchas veces no es apto para producir productos nuevos.</p>
+    <h3>La posición de organismos internacionales</h3>
+    <p>La Unión Europea prohibió el uso de plásticos oxodegradables en 2021 precisamente por este motivo. El Programa de Naciones Unidas para el Medio Ambiente también ha señalado que estos materiales no deben confundirse con plásticos biodegradables certificados y que su adopción masiva puede generar más problemas que soluciones al obstaculizar los sistemas de reciclaje existentes.</p>
+    <h3>¿Cuál es entonces la alternativa responsable?</h3>
+    <p>Para negocios que buscan reducir su impacto ambiental de forma efectiva, las opciones más recomendadas son: el <strong>plástico reciclado</strong> —que reutiliza material ya existente y reduce la demanda de plástico virgen—, los bioplásticos certificados de base vegetal como la resina de maíz, que sí se biodegradan en condiciones específicas, y la reducción directa del consumo mediante el rediseño de procesos de empaque. En Plasticor ofrecemos bolsas fabricadas con material reciclado como alternativa concreta para quienes buscan opciones más responsables sin comprometer la funcionalidad.</p>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <span class="logo-pa">PA</span>
+    <span class="logo-name">Plasticor</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#productos" onclick="scrollTo(event,'productos')">Productos</a></li>
+    <li><a href="#sectores" onclick="scrollTo(event,'sectores')">Sectores</a></li>
+    <li><a href="#empaque" onclick="scrollTo(event,'empaque')">Cotizar</a></li>
+    <li><a href="#articulos" onclick="scrollTo(event,'articulos')">Artículos</a></li>
+    <li><a href="#contacto" onclick="scrollTo(event,'contacto')">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="nav-wa" href="https://wa.me/50688311880" target="_blank">+(506) 8831-1880</a>
+    <button class="nav-cta" onclick="document.getElementById('empaque').scrollIntoView({behavior:'smooth'})">Solicitar cotización</button>
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-left">
-    <h1>La escala que su <em>operación</em> exige.</h1>
-    <p style="margin-bottom: 2rem; opacity: 0.7;">Distribución mayorista de bolsas plásticas. Calidad, volumen y respuesta inmediata desde el 2010.</p>
-    <a class="btn-gold" href="https://wa.me/50688311880">Cotizar ahora</a>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">Venta de bolsas plásticas · Costa Rica</div>
+    <h1>Empaques<br>plásticos<br><em>de calidad</em></h1>
+    <div class="hero-seo">Bolsas plásticas Costa Rica · Distribución mayorista · Carrizal, Alajuela</div>
+    <p class="hero-sub">Proveedores de la industria cárnica costarricense desde 2010. Distribución mayorista de bolsas plásticas a nivel nacional. Pedidos a partir de 15 kg en total.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('empaque').scrollIntoView({behavior:'smooth'})">Solicitar cotización</button>
+      <button class="btn-secondary" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Ver productos →</button>
+    </div>
+    <a class="hero-wa" href="https://wa.me/50688311880" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#b8972a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      +(506) 8831-1880 · WhatsApp
+    </a>
   </div>
-  <div class="hero-right">
-    <div class="hero-stat"><div class="hero-stat-num">2010</div><div>Trayectoria y experiencia real</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">24h</div><div>Tiempo máximo de respuesta</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">CR</div><div>Distribución en todo el país</div></div>
-  </div>
-</div>
-
-<section id="productos">
-  <h2 class="s-title">Nuestras Soluciones</h2>
-  <div class="prod-grid">
-    <div class="prod-item"><h3>Bolsas de Basura</h3><p>Capacidad y calibres industriales para todo tipo de residuos.</p></div>
-    <div class="prod-item"><h3>Uso Alimentario</h3><p>Bolsas certificadas para carnicerías, restaurantes y plantas.</p></div>
-    <div class="prod-item"><h3>Alta Resistencia</h3><p>Material reforzado para carga pesada y construcción.</p></div>
+  <div class="hero-visual">
+    <svg viewBox="0 0 480 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="104" x2="480" y2="104" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="0" y1="208" x2="480" y2="208" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="0" y1="312" x2="480" y2="312" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="0" y1="416" x2="480" y2="416" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="96" y1="0" x2="96" y2="520" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="192" y1="0" x2="192" y2="520" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="288" y1="0" x2="288" y2="520" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <line x1="384" y1="0" x2="384" y2="520" stroke="#e8e8e2" stroke-width="0.5" class="grid-line"/>
+      <g class="bag-main">
+        <rect x="190" y="128" width="32" height="52" rx="4" stroke="#b8972a" stroke-width="1.5" class="ld1"/>
+        <rect x="258" y="128" width="32" height="52" rx="4" stroke="#b8972a" stroke-width="1.5" class="ld1"/>
+        <path d="M164 180 L172 368 Q172 380 184 380 L296 380 Q308 380 308 368 L316 180 Z" stroke="#b8972a" stroke-width="1.5" stroke-linejoin="round" class="ld1"/>
+        <line x1="164" y1="180" x2="316" y2="180" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="190" y1="178" x2="190" y2="168" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="222" y1="178" x2="222" y2="168" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="258" y1="178" x2="258" y2="168" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="290" y1="178" x2="290" y2="168" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="184" y1="224" x2="296" y2="224" stroke="#e8d48a" stroke-width="0.75" stroke-dasharray="4 3" class="ld3"/>
+        <line x1="186" y1="254" x2="294" y2="254" stroke="#e8d48a" stroke-width="0.75" stroke-dasharray="4 3" class="ld3"/>
+        <line x1="188" y1="284" x2="292" y2="284" stroke="#e8d48a" stroke-width="0.75" stroke-dasharray="4 3" class="ld3"/>
+        <line x1="190" y1="314" x2="290" y2="314" stroke="#e8d48a" stroke-width="0.75" stroke-dasharray="4 3" class="ld4"/>
+        <text x="240" y="348" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#b8972a" class="fi2">PA</text>
+        <line x1="164" y1="180" x2="146" y2="162" stroke="#e8d48a" stroke-width="0.75" class="ld4"/>
+        <line x1="316" y1="180" x2="334" y2="162" stroke="#e8d48a" stroke-width="0.75" class="ld4"/>
+      </g>
+      <g class="bag-left" opacity="0.42">
+        <rect x="72" y="192" width="22" height="36" rx="3" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <rect x="106" y="192" width="22" height="36" rx="3" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <path d="M56 228 L62 340 Q62 348 70 348 L138 348 Q146 348 146 340 L152 228 Z" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="56" y1="228" x2="152" y2="228" stroke="#b8972a" stroke-width="0.75" class="ld3"/>
+        <line x1="72" y1="227" x2="72" y2="218" stroke="#b8972a" stroke-width="0.75" class="ld3"/>
+        <line x1="94" y1="227" x2="94" y2="218" stroke="#b8972a" stroke-width="0.75" class="ld3"/>
+        <line x1="106" y1="227" x2="106" y2="218" stroke="#b8972a" stroke-width="0.75" class="ld3"/>
+        <line x1="128" y1="227" x2="128" y2="218" stroke="#b8972a" stroke-width="0.75" class="ld3"/>
+      </g>
+      <g class="bag-right" opacity="0.38">
+        <ellipse cx="392" cy="234" rx="44" ry="18" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <line x1="348" y1="234" x2="348" y2="322" stroke="#b8972a" stroke-width="1" class="ld3"/>
+        <line x1="436" y1="234" x2="436" y2="322" stroke="#b8972a" stroke-width="1" class="ld3"/>
+        <ellipse cx="392" cy="322" rx="44" ry="18" stroke="#b8972a" stroke-width="1" class="ld2"/>
+        <ellipse cx="392" cy="322" rx="20" ry="8" stroke="#e8d48a" stroke-width="0.75" class="ld4"/>
+        <line x1="349" y1="260" x2="435" y2="260" stroke="#e8d48a" stroke-width="0.5" stroke-dasharray="3 2" class="ld5"/>
+        <line x1="349" y1="280" x2="435" y2="280" stroke="#e8d48a" stroke-width="0.5" stroke-dasharray="3 2" class="ld5"/>
+        <line x1="349" y1="300" x2="435" y2="300" stroke="#e8d48a" stroke-width="0.5" stroke-dasharray="3 2" class="ld5"/>
+      </g>
+      <g class="fi1">
+        <path d="M32 68 L32 52 L48 52" stroke="#b8972a" stroke-width="0.75" stroke-linecap="round"/>
+        <path d="M432 52 L448 52 L448 68" stroke="#b8972a" stroke-width="0.75" stroke-linecap="round"/>
+        <path d="M32 452 L32 468 L48 468" stroke="#b8972a" stroke-width="0.75" stroke-linecap="round"/>
+        <path d="M432 468 L448 468 L448 452" stroke="#b8972a" stroke-width="0.75" stroke-linecap="round"/>
+      </g>
+      <g class="fi2">
+        <line x1="132" y1="478" x2="196" y2="478" stroke="#e8d48a" stroke-width="0.5"/>
+        <text x="240" y="482" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#9a9a94" letter-spacing="3">DESDE 2010 · COSTA RICA</text>
+        <line x1="284" y1="478" x2="348" y2="478" stroke="#e8d48a" stroke-width="0.5"/>
+      </g>
+    </svg>
   </div>
 </section>
 
-<div style="background:var(--cream); padding:4rem 2rem; text-align:center; border-top:1px solid var(--border);">
-  <p style="font-family:var(--font-serif); font-size:1.5rem; font-style:italic;">
-    "Distribuyendo confianza y calidad en todo Costa Rica desde el 2010."
-  </p>
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat"><div class="stat-n">2010</div><div class="stat-l">Año de fundación</div></div>
+  <div class="stat"><div class="stat-n">15 kg</div><div class="stat-l">Pedido mínimo total</div></div>
+  <div class="stat"><div class="stat-n">Nacional</div><div class="stat-l">Cobertura de entrega</div></div>
 </div>
 
-<footer id="contacto">
-  <div class="footer-logo">DISTRIBUIDORA PLASTICOR <em>PA</em></div>
-  <p style="margin: 1rem 0; opacity: 0.5;">Distribución Mayorista · San José, Costa Rica</p>
-  <p style="font-size: 0.9rem;">
-    WhatsApp: +506 8831-1880 | Tel: +506 2483-1311<br>
-    © 2010 - 2026 Todos los derechos reservados.
-  </p>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsas para Empaque de Carne</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Negra para Basura</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Manigueta Blanca</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Manigueta Amarilla</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Transparente Lisa</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Blanca Lisa</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa en Bobina</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Rollo para Paletizar</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa para Almácigos</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Taza de Chino</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsas para Empaque de Carne</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Negra para Basura</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Manigueta Blanca</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Manigueta Amarilla</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Transparente Lisa</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa Blanca Lisa</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa en Bobina</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Rollo para Paletizar</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Bolsa para Almácigos</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Taza de Chino</span>
+  </div>
+</div>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="section">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eye">Productos · Venta de bolsas plásticas Costa Rica</div>
+      <h2 class="sec-title">Catálogo de<br>empaques</h2>
+    </div>
+    <p class="sec-aside">Todos los productos disponibles en medidas estándar o personalizadas. Consultenos para precios al por mayor y condiciones de entrega.</p>
+  </div>
+  <div class="prod-grid">
+    <div class="p-card"><div class="p-num">01</div><div class="p-badge">Producto estrella</div><h3 class="p-name">Bolsas para Empaque de Carne</h3><p class="p-desc">Bolsa de polietileno de alta resistencia diseñada para el proceso de empaque en plantas procesadoras y empacadoras. Garantiza integridad del producto durante almacenamiento y distribución.</p><div class="p-spec"><span class="p-spec-dot">—</span>Alta resistencia y sellado seguro</div><div class="p-spec"><span class="p-spec-dot">—</span>Calibres específicos para carne</div><div class="p-spec"><span class="p-spec-dot">—</span>Apta para cuartos fríos</div></div>
+    <div class="p-card"><div class="p-num">02</div><div class="p-badge">Reciclado</div><h3 class="p-name">Bolsa Negra para Basura</h3><p class="p-desc">Elaborada con material reciclado. Resistente y confiable para el manejo de desechos en negocios e industria. Disponible en distintas medidas según requerimiento.</p><div class="p-spec"><span class="p-spec-dot">—</span>Material reciclado</div><div class="p-spec"><span class="p-spec-dot">—</span>Medidas estándar y a pedido</div><div class="p-spec"><span class="p-spec-dot">—</span>Para uso comercial e industrial</div></div>
+    <div class="p-card"><div class="p-num">03</div><div class="p-badge">Comercio</div><h3 class="p-name">Bolsa Manigueta Blanca</h3><p class="p-desc">Solución práctica para el despacho de productos en comercios, sodas y puntos de venta. Presentación limpia y profesional.</p><div class="p-spec"><span class="p-spec-dot">—</span>8×16 · 10×20 · 12×25 pulgadas</div><div class="p-spec"><span class="p-spec-dot">—</span>Bultos de 30 kg</div><div class="p-spec"><span class="p-spec-dot">—</span>Stock permanente</div></div>
+    <div class="p-card"><div class="p-num">04</div><div class="p-badge">Comercio</div><h3 class="p-name">Bolsa Manigueta Amarilla</h3><p class="p-desc">Ideal para negocios que requieren diferenciación por color en el punto de venta. Misma resistencia y calidad que la línea estándar.</p><div class="p-spec"><span class="p-spec-dot">—</span>8×16 · 10×20 · 12×25 pulgadas</div><div class="p-spec"><span class="p-spec-dot">—</span>Bultos de 30 kg</div><div class="p-spec"><span class="p-spec-dot">—</span>Color uniforme garantizado</div></div>
+    <div class="p-card"><div class="p-num">05</div><div class="p-badge">Polietileno BD</div><h3 class="p-name">Bolsa Transparente Lisa</h3><p class="p-desc">Polietileno de baja densidad. Versátil para múltiples usos de empaque. Tamaño y grosor según el volumen y necesidad del cliente.</p><div class="p-spec"><span class="p-spec-dot">—</span>Baja densidad</div><div class="p-spec"><span class="p-spec-dot">—</span>Tamaño y grosor a la medida</div><div class="p-spec"><span class="p-spec-dot">—</span>Pedido mínimo 50 kg</div></div>
+    <div class="p-card"><div class="p-num">06</div><div class="p-badge">Polietileno BD</div><h3 class="p-name">Bolsa Blanca Lisa</h3><p class="p-desc">Polietileno de baja densidad en color blanco. Para empaque de productos que requieren mayor discreción o presentación limpia y uniforme.</p><div class="p-spec"><span class="p-spec-dot">—</span>Baja densidad</div><div class="p-spec"><span class="p-spec-dot">—</span>Tamaño y grosor a la medida</div><div class="p-spec"><span class="p-spec-dot">—</span>Pedido mínimo 50 kg</div></div>
+    <div class="p-card"><div class="p-num">07</div><div class="p-badge">Empaque</div><h3 class="p-name">Bolsa en Bobina / Rollo</h3><p class="p-desc">Bolsa continua desprendible en rollo para uso en líneas de empaque y puntos de servicio. Flujo constante sin interrupciones.</p><div class="p-spec"><span class="p-spec-dot">—</span>Desde 7×10 hasta 14×20 pulgadas</div><div class="p-spec"><span class="p-spec-dot">—</span>Perforación limpia y uniforme</div><div class="p-spec"><span class="p-spec-dot">—</span>Para uso industrial y comercial</div></div>
+    <div class="p-card"><div class="p-num">08</div><div class="p-badge">Logística</div><h3 class="p-name">Rollo para Paletizar</h3><p class="p-desc">Film estirable para asegurar y proteger paletas durante transporte y almacenamiento. Resistencia al rasgado y alta capacidad de estiramiento.</p><div class="p-spec"><span class="p-spec-dot">—</span>9 pulg × 1,000 pies</div><div class="p-spec"><span class="p-spec-dot">—</span>18 pulg × 1,000 pies</div><div class="p-spec"><span class="p-spec-dot">—</span>Stretch film LLDPE</div></div>
+    <div class="p-card"><div class="p-num">09</div><div class="p-badge">Agropecuario</div><h3 class="p-name">Bolsa para Almácigos</h3><p class="p-desc">Para viveros, invernaderos y producción agrícola. Negra con protección UV para el desarrollo óptimo de plantas. Café, frutales, hortalizas y más.</p><div class="p-spec"><span class="p-spec-dot">—</span>Gran variedad de tamaños en stock</div><div class="p-spec"><span class="p-spec-dot">—</span>Bultos de 30 kg</div><div class="p-spec"><span class="p-spec-dot">—</span>Fabricación mínima 150 kg</div></div>
+    <div class="p-card"><div class="p-num">10</div><div class="p-badge">Food Service</div><h3 class="p-name">Taza de Chino — Medio</h3><p class="p-desc">Recipiente desechable para alimentos calientes y fríos. Ampliamente usado en sodas, restaurantes y servicios de comida rápida en Costa Rica.</p><div class="p-spec"><span class="p-spec-dot">—</span>Tamaño medio</div><div class="p-spec"><span class="p-spec-dot">—</span>Apta para líquidos calientes</div><div class="p-price">Precio disponible por cotización</div></div>
+    <div class="p-card"><div class="p-num">11</div><div class="p-badge">Food Service</div><h3 class="p-name">Taza de Chino — Entero</h3><p class="p-desc">Recipiente desechable de mayor capacidad para alimentos calientes y fríos. Para porciones completas en sodas, comedores y servicios de comida.</p><div class="p-spec"><span class="p-spec-dot">—</span>Tamaño entero</div><div class="p-spec"><span class="p-spec-dot">—</span>Apta para líquidos calientes</div><div class="p-price">Precio disponible por cotización</div></div>
+  </div>
+</section>
+
+<!-- SECTORES -->
+<section id="sectores" class="section">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eye">Sectores</div>
+      <h2 class="sec-title">Servimos a toda<br>la industria</h2>
+    </div>
+    <p class="sec-aside">Soluciones específicas para cada tipo de negocio. Entregas periódicas, crédito comercial y factura electrónica disponible.</p>
+  </div>
+  <div class="sec-grid">
+    <div class="sec-item"><div class="sec-n">i.</div><h3 class="sec-name">Industria Cárnica</h3><p class="sec-body">Proveedores de empacadoras y procesadoras de carne en Costa Rica desde 2010. Bolsas de alta resistencia con calibres específicos para cada proceso. Entregas periódicas garantizadas.</p></div>
+    <div class="sec-item"><div class="sec-n">ii.</div><h3 class="sec-name">Hoteles y Turismo</h3><p class="sec-body">Empaques para housekeeping, lavandería y cocina. Servicio a cadenas hoteleras con entregas programadas, variedad de productos y factura electrónica.</p></div>
+    <div class="sec-item"><div class="sec-n">iii.</div><h3 class="sec-name">Restaurantes y Sodas</h3><p class="sec-body">Bolsas manigueta, tazas desechables y empaques para takeout. Para restaurantes, sodas y servicios de catering en todo el país.</p></div>
+    <div class="sec-item"><div class="sec-n">iv.</div><h3 class="sec-name">Comercio y Retail</h3><p class="sec-body">Manigueta blanca y amarilla, bolsas transparentes y más. Para tiendas, supermercados y distribuidoras que necesitan stock confiable y entrega oportuna.</p></div>
+    <div class="sec-item"><div class="sec-n">v.</div><h3 class="sec-name">Sector Agropecuario</h3><p class="sec-body">Bolsas para almácigos y viveros con protección UV. Soluciones para el sector agrícola costarricense con variedad de tamaños en stock permanente.</p></div>
+    <div class="sec-item"><div class="sec-n">vi.</div><h3 class="sec-name">Logística e Industria</h3><p class="sec-body">Rollos para paletizar y bolsas en bobina para líneas de empaque. Para operaciones de bodega, transporte y distribución a nivel nacional.</p></div>
+  </div>
+</section>
+
+<!-- EMPAQUE FORM -->
+<section id="empaque" class="section">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eye">Cotización</div>
+      <h2 class="sec-title">Cuéntenos su<br>necesidad de empaque</h2>
+    </div>
+    <p class="sec-aside">Complete el formulario y le respondemos con una cotización personalizada en menos de 24 horas hábiles.</p>
+  </div>
+  <form class="empaque-grid" action="https://formspree.io/f/rogercorderopa@gmail.com" method="POST">
+    <div>
+      <div class="form-group"><label class="form-label">Nombre o empresa</label><input class="form-input" type="text" name="empresa" placeholder="Ej. Empacadora del Norte S.A." /></div>
+      <div class="form-group"><label class="form-label">¿Para qué va a usar la bolsa?</label>
+        <select class="form-select" name="uso">
+          <option value="">Seleccione una opción...</option>
+          <option>Empaque de carne</option><option>Bolsas de basura</option>
+          <option>Despacho en comercio (manigueta)</option><option>Empaque de producto seco</option>
+          <option>Uso en cocina o restaurante</option><option>Vivero o producción agrícola</option>
+          <option>Logística y paletizado</option><option>Otro</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">¿Qué va dentro de la bolsa?</label><input class="form-input" type="text" name="contenido" placeholder="Ej. filetes de pollo, ropa, productos secos..." /></div>
+      <div class="form-group"><label class="form-label">Cantidad mensual aproximada</label>
+        <select class="form-select" name="cantidad">
+          <option value="">Seleccione un rango...</option>
+          <option>Menos de 15 kg</option><option>15 – 100 kg</option>
+          <option>100 – 500 kg</option><option>Más de 500 kg</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <div class="form-group"><label class="form-label">Medidas aproximadas (si las conoce)</label><input class="form-input" type="text" name="medidas" placeholder="Ej. 10×20 pulgadas, o no lo sé aún" /></div>
+      <div class="form-group"><label class="form-label">¿Necesita que sea biodegradable?</label>
+        <select class="form-select" name="biodegradable">
+          <option value="">Seleccione...</option>
+          <option>Sí</option><option>No</option><option>No sé, necesito orientación</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Teléfono o WhatsApp</label><input class="form-input" type="tel" name="telefono" placeholder="+(506) 8888-0000" /></div>
+      <div class="form-group"><label class="form-label">Información adicional</label><textarea class="form-textarea" name="notas" placeholder="Cualquier detalle adicional sobre su requerimiento..."></textarea></div>
+      <button type="submit" class="btn-primary" style="width:100%;padding:18px;margin-top:8px">Enviar solicitud de cotización →</button>
+    </div>
+  </form>
+</section>
+
+<!-- ARTÍCULOS -->
+<section id="articulos" class="section">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eye">Artículos</div>
+      <h2 class="sec-title">Información<br>del sector</h2>
+    </div>
+    <p class="sec-aside">Regulaciones, tendencias y todo lo que necesita saber sobre el uso de empaques plásticos en Costa Rica.</p>
+  </div>
+  <div class="blog-grid">
+    <div class="b-card" onclick="openArticle('ley')">
+      <div class="b-tag">Regulación</div>
+      <h3 class="b-title">Ley 9786: Lo que su negocio debe saber sobre el plástico en Costa Rica</h3>
+      <p class="b-excerpt">La Ley para la Gestión Integral de Residuos genera dudas en muchos comercios e industrias. Le explicamos qué está permitido, qué no, y cómo mantenerse en cumplimiento sin afectar su operación.</p>
+      <div class="b-read">Leer artículo →</div>
+    </div>
+    <div class="b-card" onclick="openArticle('oxo')">
+      <div class="b-tag">Sostenibilidad</div>
+      <h3 class="b-title">Por qué el plástico oxobiodegradable puede ser peor para el medio ambiente</h3>
+      <p class="b-excerpt">Muchos negocios adoptan el plástico oxobiodegradable creyendo que es la solución ecológica. La evidencia científica indica lo contrario: fragmenta el plástico pero obstaculiza el reciclaje real.</p>
+      <div class="b-read">Leer artículo →</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eye">Contacto</div>
+      <h2 class="sec-title">Hablemos de<br>su proyecto</h2>
+    </div>
+    <p class="sec-aside">Respuesta en menos de 24 horas hábiles. Distribuidores de bolsas plásticas en Costa Rica desde 2010.</p>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="c-block"><div class="c-label">Ubicación</div><div class="c-val">Carrizal, Alajuela<br>Costa Rica</div></div>
+      <div class="c-block"><div class="c-label">Correo electrónico</div><div class="c-val">rogercorderopa@gmail.com</div></div>
+      <div class="c-block">
+        <div class="c-label">WhatsApp</div>
+        <div class="c-val">+(506) 8831-1880</div>
+        <a class="wa-btn" href="https://wa.me/50688311880" target="_blank">Escribir por WhatsApp →</a>
+      </div>
+      <div class="c-block"><div class="c-label">Horario</div><div class="c-val">Lunes a viernes<br>8:00 a.m. – 5:00 p.m.</div></div>
+      <div class="seo-block">Plasticor PA — Venta de bolsas plásticas en Costa Rica. Distribución mayorista de bolsas plásticas, empaques industriales y soluciones de empaque para la industria cárnica, hotelería, comercio y sector agropecuario. Carrizal, Alajuela, Costa Rica. Desde 2010.</div>
+    </div>
+    <form action="https://formspree.io/f/rogercorderopa@gmail.com" method="POST">
+      <div class="form-group"><label class="form-label">Nombre o empresa</label><input class="form-input" type="text" name="nombre" placeholder="Su nombre o empresa" /></div>
+      <div class="form-group"><label class="form-label">Teléfono o WhatsApp</label><input class="form-input" type="tel" name="telefono" placeholder="+(506) 8888-0000" /></div>
+      <div class="form-group"><label class="form-label">Correo electrónico</label><input class="form-input" type="email" name="email" placeholder="correo@empresa.com" /></div>
+      <div class="form-group"><label class="form-label">Mensaje</label><textarea class="form-textarea" name="mensaje" placeholder="¿En qué le podemos ayudar?"></textarea></div>
+      <button type="submit" class="btn-primary" style="width:100%;padding:18px;margin-top:8px">Enviar mensaje →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <span class="logo-pa">PA</span>
+    <span class="logo-name">Plasticor</span>
+  </div>
+  <nav class="footer-links">
+    <a href="#productos" onclick="scrollTo(event,'productos')">Productos</a>
+    <a href="#sectores" onclick="scrollTo(event,'sectores')">Sectores</a>
+    <a href="#empaque" onclick="scrollTo(event,'empaque')">Cotizar</a>
+    <a href="#articulos" onclick="scrollTo(event,'articulos')">Artículos</a>
+    <a href="#contacto" onclick="scrollTo(event,'contacto')">Contacto</a>
+  </nav>
+  <div class="footer-right">
+    <span class="footer-copy">© 2025 Plasticor PA · Carrizal, Alajuela, Costa Rica</span>
+    <span class="footer-credit">Sitio desarrollado por <a href="https://pasystemscr.com" target="_blank">PA Systems</a></span>
+  </div>
 </footer>
 
-<a class="floating-wa" href="https://wa.me/50688311880" target="_blank">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.548 4.107 1.508 5.84L0 24l6.335-1.663A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.365l-.36-.213-3.72.976.996-3.635-.236-.374A9.768 9.768 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
-  <span>WhatsApp</span>
-</a>
-
+<script>
+function scrollTo(e, id) {
+  e.preventDefault();
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+function openArticle(id) {
+  document.getElementById('art-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+  window.scrollTo(0, 0);
+}
+function closeArticle(id) {
+  document.getElementById('art-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.addEventListener('scroll', function () {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+</script>
 </body>
 </html>
