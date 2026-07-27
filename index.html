@@ -10,6 +10,13 @@
 <meta property="og:description" content="Distribución mayorista de bolsas plásticas en Costa Rica desde 2010. Pedidos a partir de 30 kg; hacemos excepciones en Alajuela y Heredia." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://plasticorpa.com" />
+<meta property="og:image" content="https://plasticorpa.com/og-plasticor.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Plasticor PA" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2713%27%20fill%3D%27%23fafaf8%27%2F%3E%3Cellipse%20cx%3D%2732%27%20cy%3D%2732%27%20rx%3D%2727.5%27%20ry%3D%2719%27%20fill%3D%27none%27%20stroke%3D%27%23b8972a%27%20stroke-width%3D%271.8%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2741%27%20text-anchor%3D%27middle%27%20font-family%3D%27Georgia%2CTimes%20New%20Roman%2Cserif%27%20font-style%3D%27italic%27%20font-size%3D%2725%27%20fill%3D%27%23b8972a%27%3EPA%3C%2Ftext%3E%3C%2Fsvg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
@@ -42,6 +49,7 @@ a{text-decoration:none;color:inherit}
 :root{
   --bg:#fafaf8;--white:#fff;--ink:#0f0f0e;--ink2:#3a3a38;--muted:#9a9a94;
   --rule:#e8e8e2;--gold:#b8972a;--gold-dark:#9e7a1f;--gold-dim:#e8d48a;
+  --wa:#b8972a;--wa-dark:#9e7a1f;
   --serif:'Cormorant Garamond',serif;--sans:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;
 }
 
@@ -55,15 +63,24 @@ a{text-decoration:none;color:inherit}
   padding:0 56px;height:72px;transition:background .3s;
 }
 .nav.scrolled{background:rgba(250,250,248,0.99)}
-.logo{display:flex;align-items:baseline;gap:6px;cursor:pointer}
+.logo{display:inline-flex;align-items:baseline;gap:7px;cursor:pointer;border:1px solid var(--gold-dim);border-radius:999px;padding:7px 24px 10px;transition:border-color .25s,background .25s,box-shadow .25s}
+.logo:hover{border-color:var(--gold);background:rgba(184,151,42,.055);box-shadow:0 1px 8px rgba(184,151,42,.12)}
 .logo-pa{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--gold);letter-spacing:-1px;line-height:1}
 .logo-name{font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--ink2)}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s;font-weight:400}
 .nav-links a:hover{color:var(--ink)}
 .nav-right{display:flex;align-items:center;gap:16px}
-.nav-wa{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--gold);border-bottom:1px solid var(--gold-dim);padding-bottom:2px;white-space:nowrap;transition:border-color .2s}
-.nav-wa:hover{border-bottom-color:var(--gold)}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--wa);color:#fff;font-family:var(--sans);font-size:11px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;
+  padding:11px 22px;border:none;border-radius:999px;cursor:pointer;
+  box-shadow:0 1px 3px rgba(184,151,42,.28);
+  transition:background .2s,box-shadow .2s,transform .15s}
+.btn-wa:hover{background:var(--wa-dark);box-shadow:0 4px 12px rgba(184,151,42,.32);transform:translateY(-1px)}
+.btn-wa:active{transform:translateY(0)}
+.btn-wa svg{flex-shrink:0;fill:currentColor}
+.btn-wa-lg{font-size:12px;padding:15px 30px}
 .nav-cta{background:transparent;color:var(--gold);font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;border:1.5px solid var(--gold);cursor:pointer;font-family:var(--sans);transition:all .2s}
 .nav-cta:hover{background:var(--gold);color:#fff}
 
@@ -80,9 +97,7 @@ a{text-decoration:none;color:inherit}
 .btn-primary:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
 .btn-secondary{background:var(--white);color:var(--ink);font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;border:2px solid var(--ink);cursor:pointer;font-family:var(--sans);transition:all .2s}
 .btn-secondary:hover{background:var(--ink);color:var(--white)}
-.hero-wa{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--muted);transition:color .2s}
-.hero-wa:hover{color:var(--gold)}
-.hero-wa svg{flex-shrink:0}
+.hero-wa{display:inline-flex}
 .hero-visual{display:flex;align-items:center;justify-content:center}
 .hero-visual svg{width:100%;max-width:500px}
 
@@ -163,8 +178,7 @@ a{text-decoration:none;color:inherit}
 .c-block{margin-bottom:36px}
 .c-label{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .c-val{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--ink2);line-height:1.5}
-.wa-btn{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-family:var(--sans);border-bottom:1px solid var(--gold-dim);padding-bottom:4px;transition:border-color .2s;font-weight:400}
-.wa-btn:hover{border-bottom-color:var(--gold)}
+.wa-btn{margin-top:20px}
 .seo-block{font-family:var(--mono);font-size:9.5px;color:var(--muted);line-height:1.9;padding-top:32px;border-top:1px solid var(--rule);margin-top:20px}
 
 /* ── FOOTER ── */
@@ -211,7 +225,11 @@ a{text-decoration:none;color:inherit}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .nav{padding:0 24px}.nav-links{display:none}
+  .nav{padding:0 16px;gap:10px}.nav-links{display:none}
+  .nav-right{gap:10px}
+  .logo{padding:6px 16px 8px}.logo-pa{font-size:24px}.logo-name{font-size:10px;letter-spacing:3px}
+  .btn-wa .wa-label{display:none}.btn-wa{padding:11px;border-radius:50%}
+  .nav-cta{padding:10px 16px;letter-spacing:1.5px}
   .hero{grid-template-columns:1fr;padding:48px 24px;min-height:auto}
   .hero-visual{display:none}
   .stats-row{grid-template-columns:1fr}.stat{padding:24px}
@@ -279,7 +297,7 @@ a{text-decoration:none;color:inherit}
     <li><a href="#contacto" onclick="scrollTo(event,'contacto')">Contacto</a></li>
   </ul>
   <div class="nav-right">
-    <a class="nav-wa" href="https://wa.me/50671932130" target="_blank">+(506) 7193-2130</a>
+    <a class="btn-wa" href="https://wa.me/50671932130" target="_blank" aria-label="Escribir por WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label">+(506) 7193-2130</span></a>
     <button class="nav-cta" onclick="document.getElementById('empaque').scrollIntoView({behavior:'smooth'})">Solicitar cotización</button>
   </div>
 </nav>
@@ -295,10 +313,7 @@ a{text-decoration:none;color:inherit}
       <button class="btn-primary" onclick="document.getElementById('empaque').scrollIntoView({behavior:'smooth'})">Solicitar cotización</button>
       <button class="btn-secondary" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Ver productos →</button>
     </div>
-    <a class="hero-wa" href="https://wa.me/50671932130" target="_blank">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#b8972a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      +(506) 7193-2130 · WhatsApp
-    </a>
+    <a class="btn-wa btn-wa-lg hero-wa" href="https://wa.me/50671932130" target="_blank"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>Escribir por WhatsApp · 7193-2130</span></a>
   </div>
   <div class="hero-visual">
     <svg viewBox="0 0 480 520" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -525,9 +540,9 @@ a{text-decoration:none;color:inherit}
       <div class="c-block">
         <div class="c-label">WhatsApp</div>
         <div class="c-val">+(506) 7193-2130</div>
-        <a class="wa-btn" href="https://wa.me/50671932130" target="_blank">Escribir por WhatsApp →</a>
+        <a class="wa-btn btn-wa btn-wa-lg" href="https://wa.me/50671932130" target="_blank"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>Escribir por WhatsApp</span></a>
       </div>
-      <div class="c-block"><div class="c-label">Horario</div><div class="c-val">Lunes a viernes<br>8:00 a.m. – 5:00 p.m.</div></div>
+      <div class="c-block"><div class="c-label">Horario</div><div class="c-val">Lunes a viernes<br>7:00 a.m. – 4:00 p.m.</div></div>
       <div class="c-block"><div class="c-label">Pedido mínimo</div><div class="c-val">30 kg en total<br>Hacemos excepciones en Alajuela y Heredia</div></div>
       <div class="seo-block">Plasticor PA — Venta de bolsas plásticas en Costa Rica. Distribución mayorista de bolsas plásticas, empaques industriales y soluciones de empaque para la industria cárnica, hotelería, comercio y sector agropecuario. Carrizal, Alajuela, Costa Rica. Desde 2010.</div>
     </div>
